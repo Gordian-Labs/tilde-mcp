@@ -1,9 +1,10 @@
 {
   "name": "@gordian-labs/tilde-mcp",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Tilde is a search engine for AI agents to discover and pay for x402-enabled services using natural language. Tilde returns only the most relevant endpoints for each query which reduces inference costs and context contamination.",
   "type": "module",
   "main": "dist/index.js",
+  "bin": "dist/index.js",
   "files": [
     "dist",
     "README.md",
