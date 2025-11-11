@@ -63,7 +63,7 @@ The MCP server supports payments on both EVM chains (Base currently) and Solana.
   "mcpServers": {
     "tilde-mcp": {
       "command": "npx",
-      "args": ["-y", "tilde-mcp@latest"],
+      "args": ["-y", "@gordian-labs/tilde-mcp@latest"],
       "env": {
         "SOLANA_PRIVATE_KEY": "YourSolanaBase58PrivateKeyHere",
         "SUPPORTED_NETWORKS": "solana",
@@ -82,7 +82,7 @@ The MCP server supports payments on both EVM chains (Base currently) and Solana.
   "mcpServers": {
     "tilde-mcp": {
       "command": "npx",
-      "args": ["-y", "tilde-mcp@latest"],
+      "args": ["-y", "@gordian-labs/tilde-mcp@latest"],
       "env": {
         "SOLANA_PRIVATE_KEY": "YourSolanaBase58PrivateKeyHere",
         "EVM_PRIVATE_KEY": "0xYourEVMPrivateKeyHere",
