@@ -21,15 +21,6 @@ Before you begin, ensure you have:
   - `SOLANA_PRIVATE_KEY`: For Solana network (base58 format, 87-88 characters) - from Phantom, Solflare, or `solana-keygen new`
   - `EVM_PRIVATE_KEY`: For EVM networks (hex format with 0x prefix) - from MetaMask, Rainbow, or other EVM wallet
 - **MCP Client**: [Claude Desktop](https://claude.ai/download), [Cursor](https://cursor.sh), etc.,
-- **Node.js**: Version 20 or higher
-  - Verify installation: `node --version`
-
-## Installation
-
-```bash
-npm install
-npm run build
-```
 
 ## Configuration
 
@@ -70,9 +61,9 @@ The MCP server supports payments on both EVM chains (Base currently) and Solana.
 ```json
 {
   "mcpServers": {
-    "tilde-x402": {
-      "command": "node",
-      "args": ["/absolute/path/to/tilde-core/mcp/dist/index.js"],
+    "tilde-mcp": {
+      "command": "npx",
+      "args": ["-y", "tilde-mcp@latest"],
       "env": {
         "SOLANA_PRIVATE_KEY": "YourSolanaBase58PrivateKeyHere",
         "SUPPORTED_NETWORKS": "solana",
@@ -89,9 +80,9 @@ The MCP server supports payments on both EVM chains (Base currently) and Solana.
 ```json
 {
   "mcpServers": {
-    "tilde-x402": {
-      "command": "node",
-      "args": ["/absolute/path/to/tilde-core/mcp/dist/index.js"],
+    "tilde-mcp": {
+      "command": "npx",
+      "args": ["-y", "tilde-mcp@latest"],
       "env": {
         "SOLANA_PRIVATE_KEY": "YourSolanaBase58PrivateKeyHere",
         "EVM_PRIVATE_KEY": "0xYourEVMPrivateKeyHere",
@@ -99,6 +90,43 @@ The MCP server supports payments on both EVM chains (Base currently) and Solana.
         "SUPPORTED_ASSETS": "USDC",
         "SUPPORTED_FACILITATORS": "coinbase,payai",
         "MAX_NUM_RESULTS": "7"
+      }
+    }
+  }
+}
+```
+
+## Development
+
+For contributors who want to modify or extend the MCP server:
+
+### Local Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/Gordian-Labs/tilde-mcp.git
+cd tilde-mcp
+
+# Install dependencies
+npm install
+
+# Build TypeScript
+npm run build
+```
+
+### Using Local Build with MCP Client
+
+To test local changes, point your MCP client config to the local build:
+
+```json
+{
+  "mcpServers": {
+    "tilde-mcp-dev": {
+      "command": "node",
+      "args": ["/absolute/path/to/tilde-mcp/dist/index.js"],
+      "env": {
+        "SOLANA_PRIVATE_KEY": "YourSolanaBase58PrivateKeyHere",
+        "SUPPORTED_NETWORKS": "solana"
       }
     }
   }
