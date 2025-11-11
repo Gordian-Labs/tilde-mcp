@@ -103,7 +103,7 @@ export function registerSearchTool(
         // x402-axios auto-detects signer type (EVM or Solana) and routes accordingly
         const client = withPaymentInterceptor(
           axios.create({
-            decompress: false // Disable to avoid state pollution with retry logic
+            decompress: true // Required for production API (handles gzip-compressed responses)
           }),
           signer as any
         );

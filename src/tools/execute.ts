@@ -105,7 +105,7 @@ export function registerExecuteTool(
         const client = withPaymentInterceptor(
           axios.create({
             baseURL,
-            decompress: false
+            decompress: true
           }),
           signer as any
         );
