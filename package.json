@@ -1,0 +1,37 @@
+{
+  "name": "tilde-x402-server",
+  "version": "1.0.0",
+  "description": "Tilde is a search engine for AI agents to discover and pay for x402-enabled services using natural language. Tilde returns only the most relevant endpoints for each query which reduces inference costs and context contamination.",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsc && node dist/index.js",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "mcp",
+    "x402",
+    "payment",
+    "search"
+  ],
+  "author": "Gordian Labs",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Gordian-Labs/tilde-mcp"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "axios": "^1.12.2",
+    "dotenv": "^17.2.2",
+    "viem": "^2.0.0",
+    "x402-axios": "^0.6.6",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^24.5.2",
+    "typescript": "^5.9.2"
+  }
+}
