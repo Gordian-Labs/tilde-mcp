@@ -98,7 +98,7 @@ The MCP server supports payments on both EVM chains (Base currently) and Solana.
         "SUPPORTED_NETWORKS": "solana,base",
         "SUPPORTED_ASSETS": "USDC",
         "SUPPORTED_FACILITATORS": "coinbase,payai",
-        "MAX_NUM_RESULTS": "7" // default is 10
+        "MAX_NUM_RESULTS": "7"
       }
     }
   }

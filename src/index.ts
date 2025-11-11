@@ -41,8 +41,8 @@ if (isNaN(maxNumResults) || maxNumResults <= 0) {
 // Log configured maximum
 console.error(`[MCP] Maximum search results: ${maxNumResults}`);
 
-// Hardcoded search API URL (change to https://api.tilde.com in production)
-const searchApiUrl = "https://search-api-0tde.onrender.com";
+// Hardcoded search API URL
+const searchApiUrl = "https://api.trytilde.xyz";
 
 // Parse private keys (both optional, but need at least one)
 const evmPrivateKey = process.env.EVM_PRIVATE_KEY;
