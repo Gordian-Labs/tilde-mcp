@@ -2,6 +2,8 @@
 
 Tilde is a search engine for AI agents to discover and pay for x402-enabled services using natural language. Tilde returns only the most relevant endpoints for each query which reduces inference costs and context contamination.
 
+![Tilde MCP Demo](./assets/tilde-demo-clip-gh.gif)
+
 ## Features
 
 - **Multi-chain support**: Native support for Base (EVM) and Solana blockchain payments
